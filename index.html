@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="logo" src="./imagenes/logo.png" alt="Logo">
+            <label class="label1">Encriptador de texto</label>
+            <textarea id="encrypted-text" style="display: none;" readonly></textarea>
+        </header>
+        <main class="main-content">
+            <div class="input-section"><br>
+                <input type="text" id="input-text" class="input-section-text" placeholder="Ingrese el texto aquí">
+                <div class="buttons">
+                    <p class="imagen-parrafo"><span><img class="imagen" src="./imagenes/exclamacion.png" alt=""></span> solo letras minúsculas y sin acentos</p>
+                    <div class="button-group">
+                        <button class="boton" onclick="encriptarTexto()">Encriptar</button>
+                        <button class="boton" onclick="desencriptarTexto()">Desencriptar</button>
+                        <button class="boton" id="copy-button" onclick="copiarTexto()" style="display: none;">Copiar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="output-section" id="output-section">
+                <img id="lupa-imagen" src="imagenes/lupa.png" alt="Imagen descriptiva">
+                <h2 class="titulo-h2">Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </main>
+        <footer class="autor">
+            <h1 class="autor-nombre"><img class="autor-nombre-control" src="./imagenes/control.jpg">Desarrollado por Johnny Pineda</h1>     
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
